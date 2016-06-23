@@ -11,7 +11,7 @@ def shortlong(tv0,tv1):
 def odp(tv0,tv1,offset):
 	info=shortlong(tv0,tv1)
 	if offset>(info[3]-info[1]):
-		print "offset number too large"
+		print("offset number too large")
 		return None
 	else:
 		return dp(info[0],info[2][offset:])
@@ -21,17 +21,17 @@ def odp(tv0,tv1,offset):
 def dpd(tv0,tv1,pad):
   global s,l
   s,sl,l,ll=shortlong(tv0,tv1)
-  print type(s)
-  print s
-  print hex(id(s))
+  #print type(s)
+ # print s
+ # print hex(id(s))
   dl=ll-sl
   s=s[:]
-  print s
-  print hex(id(s))
-  print type(s) 
+ # print s
+ # print hex(id(s))
+  #print type(s) 
   s.extend(dl*[pad])
  
-  print hex(id(s))
+  #print hex(id(s))
   return dp(s,l)
 
 
