@@ -5,7 +5,7 @@ Created on Thu Jun 23 01:26:35 2016
 @author: Andy
 """
 
-def partition(l,n,overlap):
+def partition(l,n,overlap=0):
     ls=list(l)
     ls.append(ls[-1]+1)
     if len(ls)<n:
@@ -30,4 +30,3 @@ def main():
     print(partition(list(range(10)),2,0))
    # print(partition(1,0,1))
 
-main()
