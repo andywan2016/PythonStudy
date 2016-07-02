@@ -36,7 +36,7 @@ def decimals(n):
 def main():
    #a=decimals(18)
    #print(list(a))
-   d=decimals(3)
+   d=decimals(133)
    print([next(d) for x in range(10)])
     
 main()
