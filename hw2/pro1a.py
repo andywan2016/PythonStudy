@@ -12,10 +12,11 @@ def decimals(n):
             #ls.append(0)
        # ls.append(poi[0]
     x=1
-    while x<n:
-        x*=10
-    
-    output1=(x//n)
+    first=getpivot(n,1)   
+    for k in range(0,first[1]):
+        yield(0)
+
+    output1=(first[0]//n)
     yield(output1)
     res=x%n
     
@@ -35,7 +36,7 @@ def decimals(n):
 def main():
    #a=decimals(18)
    #print(list(a))
-   d=decimals(245)
+   d=decimals(3)
    print([next(d) for x in range(10)])
     
 main()
