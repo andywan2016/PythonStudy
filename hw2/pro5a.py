@@ -1,3 +1,6 @@
+from pro5b import reverseComplement
+
+
 def countBases(dna):
 	board=[0,0,0,0]
 	for x in dna:
@@ -21,6 +24,7 @@ def main():
 	dna='CATCGATATCTCTGAGTGCAC'
 	print(countBases('AC'))
 	print(countBases(dna))
+	print(reverseComplement(dna))
 
 
 main()
