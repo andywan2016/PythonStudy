@@ -14,12 +14,12 @@ def goodperm(cl):
 	al_new=cl.encode(al)
 	if len(al_new)!=26:
 		return False
-	al_new1=""        
-	for e in al:
-		coded=cl.encode(e)
-		if e!=coded:
-			al_new1+=coded
-	return ifSame(al_new1)
+	#al_new1=""        
+	#for e in al:
+	#	coded=cl.encode(e)
+	#	if e!=coded:
+		#	al_new1+=coded
+	return ifSame(al_new)
 
 	
 
