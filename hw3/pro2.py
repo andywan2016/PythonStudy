@@ -16,6 +16,19 @@ def encode(path,string):
 
 
 def decode(path,string):
+    #coded_str=pickle.load(open(path,'rb'))
+    return(encode_in(string))
     
+    
+# testing now    
+def main():
+    keypath="./tmp/key.pickle"
+    e=encode(keypath,"larry")
+    print(e)
+    
+    e1=decode(keypath,e)
+    
+    print(e1)
 
+main()
 
