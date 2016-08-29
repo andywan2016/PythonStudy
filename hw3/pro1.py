@@ -2,7 +2,7 @@ import string
 
 alphabet=string.ascii_lowercase
 
-print(alphabet)
+#print(alphabet)
 
 class swapaz:
 	def encode(self,s):
@@ -13,11 +13,11 @@ class swapaz:
 	def decode(self,s):
 		return(self.encode(s))
 
-s=swapaz()
-e=s.encode('larry')
-print(e)
+#s=swapaz()
+#e=s.encode('larry')
+#print(e)
 
-s.decode(e)
+#s.decode(e)
 
 class bad:
 	def encode(self,s):
