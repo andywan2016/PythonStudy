@@ -4,6 +4,9 @@ import urllib.request
 import sys
 import string   
 
+
+from bs4 import BeautifulSoup
+
 #modulename='urllib'
 #print(modulename in sys.modules)
 
@@ -19,7 +22,17 @@ tmp_str=" "
 def CheckContent(s):
     return (not (re.match('<A NAME=.+>.+</A><br>',s) is None))
 
+
+def Checkb(s):
+	return re.match('<b>.+</b>',s)
+
+
 with urllib.request.urlopen(url) as ef:
+   # soup=BeautifulSoup(ef, 'html.parser')
+   # print(soup.b.attrs)
+
+   # print(soup.prettify())
+
     for bin in ef:
         line_num+=1
         #print(bin)
@@ -29,10 +42,12 @@ with urllib.request.urlopen(url) as ef:
             currentLine_wordCount=len(re.findall('speech',tmp_str))
         #currentLine_wordCount=len(re.findall('[A-z]+',tmp_str))
             word_num+=currentLine_wordCount
-        #print(s)
-        #if line_num==227:
-           # break
-
+	if not(Checkb(s) is None):
+#######################################################		
+	  	
+       # print(s)
+       # if line_num==100:
+         #   break
 
     
 
@@ -50,3 +65,7 @@ print(word_num)
 #print(CheckContent(tmp_str))
 #print(splited)
 #print(re_result)
+
+
+
+
